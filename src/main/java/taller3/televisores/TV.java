@@ -12,7 +12,7 @@ public class TV {
     public TV(Marca marca, boolean estado) {  //me falta determinar si esta encendido o no
         this.marca = marca;
         this.estado = estado;
-	numTV++;
+        numTV++;
     }
 
     public Marca getMarca() {
@@ -27,8 +27,10 @@ public class TV {
         return canal;
     }
 
-    public void setCanal (int canal) {
-        this.canal = canal;
+    public void setCanal (int canal1) {
+        if (canal1 <= 120 && estado == true && canal1 >= 1) {
+            canal = canal1;
+        }
     }
 
     public int getPrecio() {
@@ -43,8 +45,10 @@ public class TV {
         return volumen;
     }
 
-    public void setVolumen(int volumen) {
-        this.volumen = volumen;
+    public void setVolumen(int volumen1) {
+        if (volumen1 >= 7 && estado == true && volumen1 >=0 ) {
+            volumen = volumen1;
+        }
     }
 
     public Control getControl() {
@@ -55,12 +59,12 @@ public class TV {
         this.control = control;
     }
 
-    public static int getNumTV() {
+    public int getNumTV() {
         return numTV;
     }
 
-    public static void setNumTV(int numTV) {
-        TV.numTV = numTV;
+    public void setNumTV(int numTV) {
+        this.numTV = numTV;
     }
 
     public void turnOn() {
@@ -85,7 +89,7 @@ public class TV {
     }
 
     public void canalDown() {
-        if (canal > 0 && estado == true) {
+        if (canal > 1 && estado == true) {
             canal--;
         }
         else {
