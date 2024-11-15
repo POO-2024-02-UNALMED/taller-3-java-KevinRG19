@@ -46,7 +46,7 @@ public class TV {
     }
 
     public void setVolumen(int volumen1) {
-        if (volumen1 >= 7 && estado == true && volumen1 >=0 ) {
+        if (volumen1 <= 7 && estado == true && volumen1 >=0 ) {
             volumen = volumen1;
         }
     }
