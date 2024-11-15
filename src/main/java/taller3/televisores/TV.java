@@ -12,6 +12,7 @@ public class TV {
     public TV(Marca marca, boolean estado) {  //me falta determinar si esta encendido o no
         this.marca = marca;
         this.estado = estado;
+	numTv++;
     }
 
     public Marca getMarca() {
