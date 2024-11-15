@@ -59,7 +59,7 @@ public class Control {
     }
 
     public void setVolumen (int volumen1) {
-        if (volumen1 >= 7 && tv.estado == true && volumen1 >=0 ) {
+        if (volumen1 <= 7 && tv.estado == true && volumen1 >=0 ) {
             tv.volumen = volumen1;
         }
     }
